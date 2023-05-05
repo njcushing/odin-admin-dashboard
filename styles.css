@@ -9,23 +9,42 @@ body {
     min-width: 100vw;
     min-height: 100vh;
     height: 100vh;
-    font-size: 24px;
 }
 
 :root {
     border: 1px solid #000;
+    font-size: 20px;
+    --nav-font-size: 1.5rem;
 }
 
 .main {
     display: grid;
-    grid-template: 1fr 4fr / 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 2fr 5fr 2fr;
     width: inherit;
     height: inherit;
 }
 
 .sidebar {
     grid-area: 1 / 1 / -1 / 2;
-    background-color: lightblue;
+    display: grid;
+    align-content: start;
+    background-color: rgb(76, 176, 243);
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    gap: 20px;
+}
+.sidebar li {
+    list-style: none;
+}
+.sidebar .dashboard-title {
+    font-size: var(--nav-font-size, 1.5rem);
+}
+.sidebar .sidebar-nav-primary,
+.sidebar .sidebar-nav-secondary {
+    display: grid;
+    gap: 10px;
 }
 
 .header {
