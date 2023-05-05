@@ -14,7 +14,8 @@ body {
 :root {
     border: 1px solid #000;
     font-size: 20px;
-    --nav-font-size: 1.5rem;
+    --title-size: 2rem;
+    --nav-font-size: 1.2rem;
 }
 
 .main {
@@ -29,11 +30,16 @@ body {
     grid-area: 1 / 1 / -1 / 2;
     display: grid;
     align-content: start;
-    background-color: rgb(76, 176, 243);
+    background-color: rgb(48, 156, 228);
     color: white;
     font-weight: bold;
     padding: 20px;
-    gap: 20px;
+    gap: 50px;
+}
+.sidebar .dashboard-title,
+.sidebar > div > li {
+    display: grid;
+    grid-template-columns: 50px auto;
 }
 .sidebar li {
     list-style: none;
@@ -49,12 +55,13 @@ body {
     color: rgb(11, 66, 185);
 }
 .sidebar .dashboard-title {
-    font-size: var(--nav-font-size, 1.5rem);
+    font-size: var(--title-size, 1.5rem);
 }
 .sidebar .sidebar-nav-primary,
 .sidebar .sidebar-nav-secondary {
     display: grid;
     gap: 10px;
+    font-size: var(--nav-font-size, 1.5rem);
 }
 
 .header {
