@@ -21,7 +21,7 @@ body {
 .main {
     display: grid;
     grid-template-rows: 1fr 4fr;
-    grid-template-columns: 2fr 5fr 2fr;
+    grid-template-columns: auto 5fr 2fr;
     width: inherit;
     height: inherit;
 }
