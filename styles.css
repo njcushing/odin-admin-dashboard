@@ -12,10 +12,10 @@ body {
 }
 
 :root {
-    border: 1px solid #000;
     font-size: 20px;
     --title-size: 2rem;
     --nav-font-size: 1.2rem;
+    --main-content-grid-gap: 15px;
 }
 
 .main {
@@ -70,5 +70,35 @@ body {
 
 .content {
     grid-area: 2 / 2 / -1 / -1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     background-color: rgb(172, 172, 172);
+    border: 1px solid #000;
+    padding: var(--main-content-grid-gap, 15px);
+    gap: var(--main-content-grid-gap, 15px);
 }
+.content .your-projects {
+    grid-area: 1 / 1 / 1 / 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: rgb(172, 172, 172);
+    border: 1px solid #000;
+}
+.content .announcements-and-trending {
+    grid-area: 1 / 2 / 1 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(172, 172, 172);
+    gap: var(--main-content-grid-gap, 15px);
+}
+.content .announcements {
+    grid-area: 1 / 1 / 2 / 1;
+    background-color: rgb(172, 172, 172);
+    border: 1px solid #000;
+}
+.content .trending {
+    grid-area: 2 / 1 / 3 / 1;
+    background-color: rgb(172, 172, 172);
+    border: 1px solid #000;
+}
+
