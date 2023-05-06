@@ -139,6 +139,7 @@ h3, h5, h6 {
 .announcements-container {
     display: grid;
     grid-template-rows: 1fr 1px 1fr 1px 1fr;
+    justify-items: space-between;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0px 4px 5px -0px rgba(128, 128, 128, 0.3);
@@ -146,6 +147,9 @@ h3, h5, h6 {
     gap: var(--announcements-panel-gap, 24px);
 }
 .announcement {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: center;
     padding: var(--announcement-padding, 15px);
 }
 .announcement-text {
