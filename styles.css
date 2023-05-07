@@ -64,6 +64,43 @@ body {
 .icon-button:active {
     color: rgb(20, 20, 20);
 }
+.profile-image-small,
+.profile-image-large {
+    place-self: center;
+    height: var(--trending-account-icon-maximum-size, 50px);
+    width: var(--trending-account-icon-maximum-size, 50px);
+    border-radius: 50%;
+    background-color: #cecece;
+}
+.profile-image-small {
+    height: var(--trending-account-icon-maximum-size, 50px);
+    width: var(--trending-account-icon-maximum-size, 50px);
+}
+.profile-image-large {
+    height: var(--header-account-icon-maximum-size, 75px);
+    width: var(--header-account-icon-maximum-size, 75px);
+}
+.profile-image-small:hover,
+.profile-image-large:hover,
+.search-bar input:hover {
+    outline: 2px solid #b8b8b8;
+}
+.profile-image-small:active,
+.profile-image-large:active,
+.search-bar input:focus {
+    outline: 2px solid #414141;
+}
+.profile-name-link {
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+}
+.profile-name-link:hover {
+    text-decoration: underline;
+}
+.profile-name-link:active {
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+}
 
 h3, h5, h6 {
     padding: 0px;
@@ -153,28 +190,16 @@ h3, h5, h6 {
 }
 .search-bar input:focus {
     background-color: #bbbbbb;
-    outline: 1px solid #000;
-}
-.header-top .account-icon {
-    height: var(--trending-account-icon-maximum-size, 50px);
-    width: var(--trending-account-icon-maximum-size, 50px);
-    border-radius: 50%;
-    background-color: #cecece;
 }
 .header-top .account-name {
     font-weight: bold;
+    color: black;
 }
 .header-bottom {
     display: grid;
     grid-template-columns: repeat(2, auto) 1fr repeat(3, auto);
     align-items: center;
     gap: 16px;
-}
-.account-icon-large {
-    height: var(--header-account-icon-maximum-size, 75px);
-    width: var(--header-account-icon-maximum-size, 75px);
-    border-radius: 50%;
-    background-color: #cecece;
 }
 .header-welcome {
     font-size: var(--header-welcome-font-size, 0.7rem);
@@ -188,6 +213,9 @@ h3, h5, h6 {
     font-weight: bold;
     white-space: nowrap;
     gap: 6px;
+}
+.header-bottom-account-name {
+    color: black;
 }
 .header-bottom-button {
     border-radius: 9999px;
@@ -319,19 +347,6 @@ h3, h5, h6 {
     display: grid;
     gap: 4px;
 }
-.trending-account-icon {
-    place-self: center;
-    height: var(--trending-account-icon-maximum-size, 50px);
-    width: var(--trending-account-icon-maximum-size, 50px);
-    border-radius: 50%;
-    background-color: #cecece;
-}
-.trending-account-icon:hover {
-    outline: 2px solid #b8b8b8;
-}
-.trending-account-icon:active {
-    outline: 2px solid #414141;
-}
 .trending-account-id,
 .trending-account-project-name {
     white-space: nowrap;
@@ -342,15 +357,6 @@ h3, h5, h6 {
     font-size: var(--trending-account-id-font-size, 0.7rem);
 }
 .trending-account-project-name {
-    text-decoration: none;
     font-size: var(--trending-account-project-name-font-size, 0.72rem);
-    color: rgb(48, 48, 48);
-}
-.trending-account-project-name:hover {
-    text-decoration: underline;
-}
-.trending-account-project-name:active {
-    color: rgb(0, 0, 0);
-    text-decoration: underline;
 }
 
