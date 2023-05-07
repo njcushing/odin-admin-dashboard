@@ -20,6 +20,9 @@ body {
     --sidebar-title-size: 2rem;
     --sidebar-nav-font-size: 1.2rem;
     --header-padding: 20px 40px;
+    --header-account-icon-maximum-size: 75px;
+    --header-welcome-font-size: 0.7rem;
+    --header-bottom-account-name-font-size: 1.05rem;
     --project-panel-padding: 30px 10px 30px 28px;
     --project-panel-gap: 24px;
     --project-panel-font-size: 0.8rem;
@@ -33,7 +36,7 @@ body {
     --trending-account-padding: 6px;
     --trending-account-icon-maximum-size: 50px;
     --trending-account-id-font-size: 0.7rem;
-    --trending-account-name-font-size: 0.72rem;
+    --trending-account-project-name-font-size: 0.72rem;
 }
 
 h3, h5, h6 {
@@ -96,11 +99,9 @@ h3, h5, h6 {
 }
 .header-top {
     display: grid;
-    grid-template-columns: auto 6fr 1fr repeat(3, auto);
-    border: 1px solid #000;
-}
-.header-top div {
-    border: 1px solid #000;
+    grid-template-columns: auto 8fr 1fr repeat(3, auto);
+    align-items: center;
+    gap: 10px;
 }
 .search-icon {
     color: grey;
@@ -110,7 +111,7 @@ h3, h5, h6 {
 }
 .search-bar input {
     appearance: none;
-    height: 24px;
+    height: 20px;
     background-color: #cccccc;
     border-radius: 16px;
     border: none;
@@ -118,10 +119,59 @@ h3, h5, h6 {
     width: 100%;
 }
 .search-bar input:focus {
-    outline: 2px solid #000;
+    background-color: #bbbbbb;
+    outline: 1px solid #000;
+}
+.header-top .account-icon {
+    height: var(--trending-account-icon-maximum-size, 50px);
+    width: var(--trending-account-icon-maximum-size, 50px);
+    border-radius: 50%;
+    background-color: #cecece;
+}
+.header-top .account-name {
+    font-weight: bold;
 }
 .header-bottom {
-    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(2, auto) 1fr repeat(3, auto);
+    align-items: center;
+    gap: 16px;
+}
+.account-icon-large {
+    height: var(--header-account-icon-maximum-size, 75px);
+    width: var(--header-account-icon-maximum-size, 75px);
+    border-radius: 50%;
+    background-color: #cecece;
+}
+.header-welcome {
+    font-size: var(--header-welcome-font-size, 0.7rem);
+    font-weight: bold;
+    white-space: nowrap;
+}
+.header-bottom-account-info {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    font-size: var(--header-bottom-account-name-font-size, 1.05rem);
+    font-weight: bold;
+    white-space: nowrap;
+    gap: 6px;
+}
+.header-bottom-button {
+    border-radius: 9999px;
+    height: 36px;
+    width: 90px;
+    font-weight: bold;
+    color: rgb(240, 240, 240);
+    background-color: rgb(86, 156, 248);
+    border: none;
+}
+.header-bottom-button:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(109, 171, 252);
+}
+.header-bottom-button:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(47, 132, 243);
 }
 
 .content {
@@ -216,7 +266,7 @@ h3, h5, h6 {
     grid-template-columns: var(--trending-account-icon-maximum-size, 50px) 1fr;
     gap: 10px;
 }
-.trending-account-id-and-name {
+.trending-account-id-and-project-name {
     align-self: center;
     display: grid;
     gap: 4px;
@@ -229,7 +279,7 @@ h3, h5, h6 {
     background-color: #cecece;
 }
 .trending-account-id,
-.trending-account-name {
+.trending-account-project-name {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -237,8 +287,8 @@ h3, h5, h6 {
 .trending-account-id {
     font-size: var(--trending-account-id-font-size, 0.7rem);
 }
-.trending-account-name {
-    font-size: var(--trending-account-name-font-size, 0.72rem);
+.trending-account-project-name {
+    font-size: var(--trending-account-project-name-font-size, 0.72rem);
     color: rgb(48, 48, 48);
 }
 
