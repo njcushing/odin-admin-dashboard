@@ -136,23 +136,33 @@ h3, h5, h6 {
     font-size: 2.2rem;
 }
 .sidebar .dashboard-title,
-.sidebar > div > li {
+.sidebar li {
+    list-style: none;
     display: grid;
     grid-template-columns: 70px auto;
     padding: 0 40px 0 4px;
 }
-.sidebar li {
-    list-style: none;
+.sidebar-icon {
+    grid-row: 1 / 2;
 }
-.sidebar a {
+.sidebar a,
+.sidebar-icon {
     text-decoration: none;
     color: white;
 }
-.sidebar a:hover {
-    color: rgb(149, 243, 255);
+.sidebar li a:hover,
+.sidebar li a:hover ~ .sidebar-icon {
+    color: rgb(195, 246, 255);
 }
-.sidebar a:active {
-    color: rgb(11, 66, 185);
+.sidebar li a:hover {
+    text-decoration: underline;
+}
+.sidebar li a:active,
+.sidebar li a:active ~ .sidebar-icon {
+    color: rgb(161, 243, 255);
+}
+.sidebar li a:active {
+    text-decoration: underline;
 }
 .sidebar .dashboard-title {
     font-size: var(--sidebar-title-size, 1.5rem);
