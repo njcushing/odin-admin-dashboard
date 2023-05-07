@@ -43,7 +43,7 @@ body {
     --trending-account-project-name-font-size: 0.72rem;
 }
 
-.material-symbols-rounded {
+.no-select {
     -webkit-touch-callout: none;    /* iOS Safari */
     -webkit-user-select: none;      /* Safari */
     -khtml-user-select: none;       /* Konqueror HTML */
@@ -225,7 +225,7 @@ h3, h5, h6 {
 }
 .projects-container {
     display: grid;
-    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(3, min-content) / repeat(2, 1fr);
     gap: var(--project-panel-gap, 24px);
 }
 .project-panel {
