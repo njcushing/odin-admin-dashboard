@@ -142,9 +142,8 @@ h3, h5, h6 {
     padding: 0px 20px 0px 0px;
 }
 .search-bar input {
-    font-family: Nunito, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
-        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    appearance: none;
+    font-family: var(--nunito-font-family);
+    font-weight: bold;
     height: 20px;
     background-color: #cccccc;
     border-radius: 16px;
@@ -327,6 +326,12 @@ h3, h5, h6 {
     border-radius: 50%;
     background-color: #cecece;
 }
+.trending-account-icon:hover {
+    outline: 2px solid #b8b8b8;
+}
+.trending-account-icon:active {
+    outline: 2px solid #414141;
+}
 .trending-account-id,
 .trending-account-project-name {
     white-space: nowrap;
@@ -337,7 +342,15 @@ h3, h5, h6 {
     font-size: var(--trending-account-id-font-size, 0.7rem);
 }
 .trending-account-project-name {
+    text-decoration: none;
     font-size: var(--trending-account-project-name-font-size, 0.72rem);
     color: rgb(48, 48, 48);
+}
+.trending-account-project-name:hover {
+    text-decoration: underline;
+}
+.trending-account-project-name:active {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
 }
 
