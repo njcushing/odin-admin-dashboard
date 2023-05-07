@@ -69,6 +69,7 @@ body {
     place-self: center;
     height: var(--trending-account-icon-maximum-size, 50px);
     width: var(--trending-account-icon-maximum-size, 50px);
+    object-fit: cover;
     border-radius: 50%;
     background-color: #cecece;
 }
